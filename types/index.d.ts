@@ -4,7 +4,7 @@ declare module 'claude-code' {
   interface PluginState {
     cozy: {
       clock: number
-      scene: string
+      sceneName: string
       isOn: boolean
       toolAt: number
       library: number

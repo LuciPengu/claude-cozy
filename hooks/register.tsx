@@ -10,7 +10,7 @@ import { frameLines } from './engine/render'
 import type { Scene } from './engine/types'
 
 const clock = atom({ plugin: 'cozy', key: 'clock' } as const, 0)
-const current = atom({ plugin: 'cozy', key: 'scene' } as const, '')
+const current = atom({ plugin: 'cozy', key: 'sceneName' } as const, '')
 const isOn = atom({ plugin: 'cozy', key: 'isOn' } as const, true)
 const toolAt = atom({ plugin: 'cozy', key: 'toolAt' } as const, -100)
 const libraryVersion = atom({ plugin: 'cozy', key: 'library' } as const, 0)
@@ -58,7 +58,8 @@ const S = {
   pinned: null as string | null,
 }
 
-const find = (name: string) => S.library.scenes.find(s => s.name.toLowerCase() === name.toLowerCase())
+const find = (name: unknown) =>
+  typeof name === 'string' ? S.library.scenes.find(s => s.name.toLowerCase() === name.toLowerCase()) : undefined
 
 async function refresh($: EngineInterface) {
   const next = await loadLibrary($, S.dirs)
