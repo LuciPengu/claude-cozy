@@ -1,0 +1,51 @@
+# A little campfire under the stars. Sparks fly when Claude uses a tool.
+name: campfire
+caption: a campfire crackles
+size: 34x4
+
+[palette]
+o = #ff9a3c
+y = #ffd36b
+b = #8a6a4a
+s = #fff3b0
+
+[particles stars]
+glyphs: ✦ ·
+count: 6
+motion: twinkle
+speed: 0.8
+area: 0,0 34,2
+color: s
+
+[particles embers]
+glyphs: · ˙
+count: 4
+motion: rise
+speed: 1.2
+area: 14,0 6,2
+color: o
+
+[sprite fire]
+at: 16,2
+fps: 3
+frames:
+|🔥
+---
+| 🔥
+---
+|🔥
+
+[particles sparks]
+on: tool
+glyphs: * ✦ ·
+count: 8
+motion: rise
+speed: 3
+area: 12,0 10,3
+color: y
+
+[layer logs]
+at: 14,3
+color: b
+art:
+|=≡≡≡=

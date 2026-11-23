@@ -1,0 +1,64 @@
+# Fish swim past swaying seaweed. An octopus says hi when Claude uses a tool.
+name: fish
+caption: fish swimming around
+size: 34x4
+
+[palette]
+s = #4aa8ff
+g = #5fd38d
+y = #ffc27a
+
+[particles bubbles]
+glyphs: o °
+count: 5
+motion: rise
+speed: 0.9
+area: 0,0 34,3
+color: s
+
+[sprite seaweed]
+at: 5,2
+fps: 1.5
+color: g
+frames:
+| (
+|(
+---
+|)
+| )
+
+[sprite seaweed2]
+at: 26,2
+fps: 1.2
+color: g
+frames:
+|)
+| )
+---
+| (
+|(
+
+[sprite fish]
+path: wave -2,1 -> 34,1 height 1
+speed: 2
+frames:
+|🐟
+
+[sprite clownfish]
+path: walk 34,2 -> -2,2
+speed: 1.3
+frames:
+|🐠
+
+[sprite octopus]
+on: tool
+at: 18,1
+frames:
+|🐙
+
+[layer sand]
+at: 0,3
+repeat: yes
+color: y
+art:
+|.,  

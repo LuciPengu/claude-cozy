@@ -1,0 +1,48 @@
+# A penguin waddles across the ice. Each time Claude runs a tool,
+# it catches a fish.
+name: penguin
+caption: a penguin goes for a waddle
+size: 34x4
+
+[palette]
+w = #e8f4ff
+i = #a8dcff
+y = #fff3b0
+
+[particles snow]
+glyphs: * ·
+count: 7
+motion: fall
+speed: 0.8
+area: 0,0 34,3
+color: w
+
+[particles stars]
+when: night
+glyphs: ✦ ·
+count: 4
+motion: twinkle
+area: 0,0 34,1
+color: y
+
+[sprite penguin]
+path: walk -2,2 -> 34,2
+speed: 1.5
+fps: 3
+frames:
+|🐧
+---
+| 🐧
+
+[sprite fish]
+on: tool
+follow: penguin 3,0
+frames:
+|🐟
+
+[layer ice]
+at: 0,3
+repeat: yes
+color: i
+art:
+|▔

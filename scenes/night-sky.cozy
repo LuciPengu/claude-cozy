@@ -1,0 +1,39 @@
+# Stars over quiet hills. A shooting star flies by when Claude uses a tool.
+name: night sky
+caption: stars over quiet hills
+size: 34x4
+
+[palette]
+s = #fff3b0
+m = #f4f9ff
+h = #3f7f6b
+
+[particles stars]
+glyphs: ✦ · ⋆
+count: 9
+motion: twinkle
+speed: 0.6
+area: 0,0 34,3
+color: s
+
+[layer moon]
+at: 4,0
+color: m
+art:
+|☾
+
+[sprite shooting]
+on: tool
+path: walk 10,0 -> 30,2
+speed: 9
+color: s
+frames:
+|✦
+
+[layer hills]
+at: 0,3
+repeat: yes
+scroll: -0.3
+color: h
+art:
+|▁▂▃▄▃▂▁▁

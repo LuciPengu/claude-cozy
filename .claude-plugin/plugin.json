@@ -1,0 +1,34 @@
+{
+  "name": "cozy",
+  "version": "1.0.0",
+  "description": "Calm little animated scenes (penguins, sheep, campfires, your own) in place of the spinner while Claude works. Zero tokens.",
+  "author": { "name": "LuciPengu" },
+  "license": "MIT",
+  "homepage": "https://github.com/LuciPengu/claude-cozy",
+  "repository": "https://github.com/LuciPengu/claude-cozy",
+  "keywords": ["animation", "spinner", "focus", "cozy", "ascii"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "speed": {
+      "type": "string",
+      "title": "Speed",
+      "description": "How fast the scenes move",
+      "default": "normal",
+      "options": ["calm", "normal", "lively"]
+    },
+    "scenes": {
+      "type": "string",
+      "title": "Scenes",
+      "description": "Play every scene, or only the ones you starred in /cozy gallery",
+      "default": "all",
+      "options": ["all", "favorites"]
+    },
+    "caption": {
+      "type": "string",
+      "title": "Caption",
+      "description": "Show a one-line caption under the scene",
+      "default": "yes",
+      "options": ["yes", "no"]
+    }
+  }
+}

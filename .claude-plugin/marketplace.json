@@ -1,0 +1,14 @@
+{
+  "name": "claude-cozy",
+  "owner": {
+    "name": "LuciPengu"
+  },
+  "plugins": [
+    {
+      "name": "cozy",
+      "source": "./",
+      "description": "Calm animated scenes in place of the spinner while Claude works"
+    }
+  ],
+  "description": "cozy: calm animated scenes for Claude Code while it works"
+}

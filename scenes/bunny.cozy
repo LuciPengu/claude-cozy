@@ -1,0 +1,48 @@
+# A bunny hops through the flowers. It finds a carrot when Claude uses a tool.
+name: bunny
+caption: a bunny hops through flowers
+size: 34x4
+
+[palette]
+y = #ffd36b
+m = #fff3b0
+p = #ff9ecf
+g = #7ed957
+
+[sprite sun]
+when: day
+at: 29,0
+fps: 1
+color: y
+frames:
+|\|/
+---
+|-o-
+
+[layer moon]
+when: night
+at: 30,0
+color: m
+art:
+|☾
+
+[sprite bunny]
+path: hop -2,2 -> 34,2 height 1
+speed: 2.5
+frames:
+|🐇
+
+[sprite carrot]
+on: tool
+follow: bunny 3,0
+frames:
+|🥕
+
+[layer flowers]
+at: 0,3
+repeat: yes
+color: g
+art:
+|✿,,❀,,,
+mask:
+|p..p...

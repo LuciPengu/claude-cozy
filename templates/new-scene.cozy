@@ -1,0 +1,61 @@
+# Your own cozy scene. Save this file and it shows up on Claude's next turn.
+# Lines starting with # are notes and are ignored.
+#
+# Quickest way: delete everything below and just draw frames, with a line
+# of --- between them. That's a flipbook, and it works on its own:
+#
+#   name: blinky
+#   fps: 2
+#
+#   (o.o)
+#   ---
+#   (-.-)
+#
+# Or keep going with the sections below for moving things, colors, snow,
+# day/night and little surprises when Claude runs a tool.
+# Full guide: README.md, "Make your own scene".
+
+name: NAME
+caption: CAPTION
+size: 34x4
+
+# Colors you can use by letter.
+[palette]
+w = #e8f4ff
+g = #7ed957
+y = #ffd36b
+
+# Things that float around on their own: fall, rise, drift or twinkle.
+[particles sparkles]
+glyphs: · ✦
+count: 5
+motion: twinkle
+area: 0,0 34,2
+color: y
+
+# Something that moves. Art goes on lines starting with |.
+# Paths: still x,y | walk a -> b | bounce a -> b | hop a -> b height 1
+#        wave a -> b height 1 | arc a -> b over 16 height 2 | orbit x,y radius 6,1
+[sprite buddy]
+path: hop -7,2 -> 34,2 height 1
+speed: 2
+fps: 2
+frames:
+|(•ᴗ•)
+---
+|(•ᴗ•)ノ
+
+# Shows up for a moment every time Claude runs a tool.
+[sprite surprise]
+on: tool
+follow: buddy 7,0
+frames:
+|✨
+
+# The ground. repeat: yes tiles it across the whole width.
+[layer ground]
+at: 0,3
+repeat: yes
+color: g
+art:
+|‿

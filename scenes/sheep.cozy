@@ -1,0 +1,37 @@
+# Sheep jump the fence, one after another.
+name: sheep
+caption: counting sheep
+size: 34x4
+
+[palette]
+g = #7ed957
+b = #c8a27a
+m = #fff3b0
+
+[layer moon]
+when: night
+at: 29,0
+color: m
+art:
+|☾
+
+[layer fence]
+at: 16,1
+color: b
+art:
+|╥
+|║
+
+[sprite sheep]
+path: arc -2,2 -> 34,2 over 15 height 2 reach 4
+speed: 4
+
+frames:
+|🐑
+
+[layer grass]
+at: 0,3
+repeat: yes
+color: g
+art:
+|‿

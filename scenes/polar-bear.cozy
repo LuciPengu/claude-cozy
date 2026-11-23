@@ -1,0 +1,58 @@
+# A polar bear bobs on an ice floe. It naps at night.
+name: polar bear
+caption: a polar bear floats on the ice
+size: 34x4
+
+[palette]
+w = #f4f9ff
+s = #4aa8ff
+d = #9fb7cc
+
+[particles snow]
+glyphs: * ·
+count: 6
+motion: fall
+speed: 0.5
+area: 0,0 34,3
+color: w
+
+[sprite bear]
+path: bounce 12,1 -> 13,1
+speed: 0.4
+blink: 4
+frames:
+|ʕ•ᴥ•ʔ
+---
+|ʕ-ᴥ-ʔ
+
+[sprite floe]
+follow: bear -2,1
+color: w
+frames:
+|▟█████▙
+
+[sprite zz]
+when: night
+follow: bear 6,-1
+fps: 1.5
+color: d
+frames:
+|z
+---
+| z
+---
+|  Z
+
+[sprite fish]
+on: tool
+follow: bear 7,1
+frames:
+|🐟
+
+[layer sea]
+at: 0,3
+repeat: yes
+scroll: -1
+color: s
+art:
+|~ ~~  

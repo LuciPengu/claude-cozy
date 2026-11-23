@@ -1,0 +1,46 @@
+# A warm cup by a rainy window. A cookie shows up when Claude uses a tool.
+name: coffee
+caption: a warm cup of coffee
+size: 34x4
+
+[palette]
+w = #e8f4ff
+r = #7fa8d6
+b = #c8a27a
+
+[particles rain]
+glyphs: ' ,
+count: 6
+motion: fall
+speed: 2.5
+area: 0,0 34,3
+color: r
+
+[sprite steam]
+at: 15,0
+fps: 1.5
+color: w
+frames:
+| ( ~
+|  )
+---
+|  ) 
+| (
+
+[layer cup]
+at: 15,2
+art:
+|☕
+
+[sprite cookie]
+on: tool
+at: 19,2
+frames:
+|🍪
+
+[layer table]
+at: 0,3
+repeat: yes
+color: b
+art:
+|▁

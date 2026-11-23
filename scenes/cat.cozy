@@ -1,0 +1,46 @@
+# A cat watches a ball of yarn. A mouse runs past when Claude uses a tool.
+name: cat
+caption: a cat plays with yarn
+size: 34x4
+
+[palette]
+p = #ff9ecf
+w = #ffc27a
+
+[sprite cat]
+at: 2,1
+blink: 3.5
+color: p
+frames:
+|(=^･ω･^=)
+---
+|(=^-ω-^=)
+
+[sprite tail]
+at: 4,2
+fps: 2
+color: p
+frames:
+|~
+---
+| ~
+
+[sprite yarn]
+path: bounce 13,2 -> 30,2
+speed: 4
+frames:
+|🧶
+
+[sprite mouse]
+on: tool
+path: walk 34,2 -> 0,2
+speed: 12
+frames:
+|🐭
+
+[layer floor]
+at: 0,3
+repeat: yes
+color: w
+art:
+|_
